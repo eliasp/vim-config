@@ -1,0 +1,22 @@
+snippet logd
+	# TODO: REMOVE DEVEL CODE
+	$Self->{LogObject}->Log(
+		Priority => 'notice',
+		Message  => "${1:debugvar}: $${2:$1}",
+	);
+
+snippet loge
+	$Self->{LogObject}->Log(
+		Priority => 'error',
+		Message  => "${1:errormessage}",
+	);
+
+snippet logn
+	$Self->{LogObject}->Log(
+		Priority => 'notice',
+		Message  => "${1:notice}",
+	);
+
+snippet dump
+	# TODO: REMOVE DEVEL CODE
+	$Self->{LogObject}->Dumper(${1});
