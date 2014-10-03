@@ -17,5 +17,8 @@
 	path = bundle/airline
     url = https://github.com/bling/vim-airline
 [submodule "bundle/neocomplete.vim"]
-    path = bundle/neocomplete.vim
-    url = https://github.com/Shougo/neocomplete.vim.git
+	path = bundle/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim.git
+[submodule "bundle/vim-qml"]
+	path = bundle/vim-qml
+	url = https://github.com/peterhoeg/vim-qml.git
