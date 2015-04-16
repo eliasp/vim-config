@@ -1,3 +1,4 @@
+execute pathogen#infect()
 filetype plugin on
 filetype indent on
 set expandtab
@@ -34,7 +35,6 @@ let syntastic_auto_loc_list=1
 let syntastic_always_populate_loc_list=1
 let g:syntastic_python_pylint_post_args='--disable=line-too-long,too-few-public-methods'
 
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
