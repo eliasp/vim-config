@@ -97,3 +97,9 @@ set splitbelow
 set splitright
 
 set pastetoggle=<F2>
+
+" disable arrow keys to enforce usage of hjkl
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
