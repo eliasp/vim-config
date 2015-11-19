@@ -70,6 +70,7 @@ set statusline+=\ %P
 augroup filetypedetect
     au BufNewFile,BufRead *.tjp,*.tji  setf tjp
     au BufNewFile,BufRead *rb           set tabstop=2 shiftwidth=2
+    au BufNewFile,BufRead *.yml         set tabstop=2 shiftwidth=2
 augroup END
 
 " enable neocomplete
