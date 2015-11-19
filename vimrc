@@ -26,6 +26,9 @@ set nu
 
 " adapt colorscheme to dark terminal backgrounds
 set background=dark
+colorscheme solarized
+let g:solarized_contrast = "high"
+let g:solarized_visibility = "high"
 
 " highlight search results
 set hlsearch
