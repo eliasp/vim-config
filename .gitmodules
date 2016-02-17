@@ -30,7 +30,7 @@
 	url = https://github.com/saltstack/salt-vim.git
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
-	url = github:tpope/vim-commentary
+	url = https://github.com/tpope/vim-commentary
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
