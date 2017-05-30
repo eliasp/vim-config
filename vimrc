@@ -33,10 +33,12 @@ let g:solarized_visibility = "high"
 " highlight search results
 set hlsearch
 
-" always populate the location list when there are errors found by syntastic
-let syntastic_auto_loc_list=1
-let syntastic_always_populate_loc_list=1
-let g:syntastic_python_pylint_post_args='--disable=line-too-long,too-few-public-methods'
+if !has('nvim')
+    " always populate the location list when there are errors found by syntastic
+    let syntastic_auto_loc_list=1
+    let syntastic_always_populate_loc_list=1
+    let g:syntastic_python_pylint_post_args='--disable=line-too-long,too-few-public-methods'
+endif
 
 syntax on
 filetype plugin indent on
@@ -74,14 +76,19 @@ augroup filetypedetect
     au BufNewFile,BufRead *.jinja      setf jinja
 augroup END
 
-" enable neocomplete
-let g:neocomplete#enable_at_startup = 1
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return neocomplete#close_popup() . "\<CR>"
-  " For no inserting <CR> key.
-  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunction
+if !has('nvim')
+    " enable neocomplete
+    let g:neocomplete#enable_at_startup = 1
+    inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+    function! s:my_cr_function()
+      return neocomplete#close_popup() . "\<CR>"
+      " For no inserting <CR> key.
+      "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+    endfunction
+endif
+if has('nvim')
+    let g:deoplete#enable_at_startup = 1
+endif
 
 set nobackup
 set nowritebackup
