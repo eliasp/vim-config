@@ -90,6 +90,12 @@ if has('nvim')
     let g:deoplete#enable_at_startup = 1
 endif
 
+"configuration for airline plugin
+let g:airline_theme='solarized'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_solarized_bg='dark'
+let g:airline_powerline_fonts = 1
+
 set nobackup
 set nowritebackup
 
