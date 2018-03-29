@@ -127,3 +127,7 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" invoke the "choosewin" plugin
+nmap - <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
